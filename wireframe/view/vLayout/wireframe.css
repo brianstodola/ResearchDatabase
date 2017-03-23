@@ -1,0 +1,55 @@
+
+	body {
+		background-color:FFFFEE;
+	}
+
+	body,td,th,pre {
+		font-family:verdana,arial,helvetica,sans-serif;
+		font-size:8pt;
+	}
+
+	th {
+		vertical-align:top;
+		text-align:left;
+		font-weight:bold;
+		background-color:336600;
+		color:FFFFFF
+	}
+
+	td, pre {
+		background-color:EEFFCC;
+		vertical-align:top;
+	}
+
+	table {
+		border : thinnest solid Black;
+	}
+	
+	a {
+		text-decoration: none;
+	}
+
+	pre {
+		border : thinnest solid Black;
+	}
+	
+	.warning {
+		background-color:993333;
+		color:FFFFFF
+	}
+
+.heading1 {
+	color:008040;
+	font-weight:bold;
+	font-family : Arial, Helvetica, sans-serif;
+	font-size:18pt;
+	font-weight: bold;
+	vertical-align: bottom;
+}
+.heading2 {
+	color:008040;
+	link:FFFFFF;
+	font-family : Arial, Helvetica, sans-serif;
+	font-size:14pt;
+	font-weight: bold;
+}
