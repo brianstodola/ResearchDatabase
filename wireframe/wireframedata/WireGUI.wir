@@ -1,0 +1,71 @@
+
+[Quick Map]
+;I show a "Quick Map" of the wireframe data.
+Goto Page = View Page
+Edit Page = Edit Page - Form
+*include* = global_menu
+[Edit Data - Form]
+;I show a form for editing the ENTIRE DATA FILE at once, in its raw INI format.  This is very useful for rearranging the displayed order of Pages and Paths, for copying links from one place to another; for importing an existing data-file, etc.
+onComplete = Edit Data - Action
+*include* = global_menu
+[History]
+;
+*include* = global_menu
+[Admin Menu]
+;
+*include* = global_menu
+[Help]
+;
+*include* = global_menu
+[Credits]
+;
+*include* = global_menu
+[View Page]
+;I show a single page of the wireframe.  I show the Responsibilities, and all of the Links and Menu items.
+Follow Link = View Page
+Follow Menu Item = View Page
+Edit this Page = Edit Page - Form
+*include* = global_menu
+[Edit Page - Form]
+;I display a form for editing a single page of the wireframe.
+onSubmit = Edit Page - Action
+*include* = global_menu
+[Edit Page - Action]
+;I amend the definition of the page and save a new data file.  I return to the single page view, or to the quick map, depending where I came from.
+onComplete (I came from Page View) = View Page
+onComplete (I came from Quick Map view) = Quick Map
+[Edit Data - Action]
+;I archive the previous version, then write over the production version of the datafile.
+onComplete = Quick Map
+[global_menu]
+;Included in many pages
+menu.Map = Quick Map
+menu.Edit DataFile = Edit Data - Form
+menu.History = History
+menu.Admin = Admin Menu
+menu.Help = Help
+menu.Credits = Credits
+[Hearts menu]
+;
+*include* = global_menu
+[Exit]
+;
+*include* = global_menu
+[bugger me]
+;
+  	
+  	
+  	
+		
+		
+	    
+		
+		
+		
+		    
+		
+	
+  
+
+[[:changedescription:]]
+Created by GUI
