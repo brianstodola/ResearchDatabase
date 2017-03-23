@@ -1,0 +1,42 @@
+<cfsilent>
+<!--- -->
+<fusedoc fuse="act_archivedata.cfm">
+	<responsibilities>
+		I save a copy of the current wireframe datafile, with datestamped suffix.
+	</responsibilities>
+	<properties>
+		<history author="Lee Bjork Borkman" email="bjork@bjork.net" role="Architect" type="Create"/>
+		<property name="licence" value="See licence.txt" />
+		<property name="version" value="$Revision$" />
+		<property name="lastupdated" value="$Date$" />
+		<property name="updatedby" value="$Author$" />
+	</properties>
+	<io>
+		<in>
+			<string name="wireframename" scope="attributes"/>
+			<string name="fullwireframedir" scope="attributes"/>
+			<file name="#attributes.fullwireframedir##request.os.delimiter##attributes.wireframename#.wir"/>
+		</in>
+		<out>
+			<file name="#attributes.fullwireframedir##request.os.delimiter##newname#.wir"/>
+		</out>
+	</io>
+</fusedoc>
+--->
+
+<cfset datestamp = "#LSDateFormat(now(), 'yyyymmdd')##LSTimeFormat(now(), 'HHMMSS')#">    
+<cfset newname = "#attributes.wireframename#_#datestamp#">
+<cffile action="MOVE" 
+		source="#attributes.fullwireframedir##request.os.delimiter##attributes.wireframename#.wir" 
+		destination="#attributes.fullwireframedir##request.os.delimiter##newname#.wir">
+
+<!---
+$Log: act_archivedata.cfm,v $
+Revision 1.0  2002-04-26 21:07:19+10  leeb
+Initial revision
+
+Revision 1.3  2001/08/21 13:26:58  leeborkman
+Added CVS Log block to the bottom of each file
+
+--->
+</cfsilent>
