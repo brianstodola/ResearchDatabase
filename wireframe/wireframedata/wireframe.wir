@@ -1,0 +1,52 @@
+
+[Home]
+;I show a quick map of the application, in the form of a list of ALL pages/states, together with their links/exits.  The page names are hyperlinked to the wireframe for the particular page. In this way the user can quickly jump to any point in the logic.  FORM. I also show the entire wireframe datafile in a form.  There is also a field to include a brief text description of any changes made. The datafile can be edited, and the new version submitted.
+Submit edited wireframe data = Process edited data
+menu.Jump to a page_state = Show PageState
+menu.Quick Map = Home
+menu.History = History
+menu.Help = Home
+[Show PageState]
+;I show the responsibilities of a particular page/state.  I also show a list of links/exits from this page/state. For the sake of clarity, the links can be separated into those particular to this page, and those contained in more general navigation. FORM. I also show the entire wireframe datafile in a form.  There is also a field to include a brief text description of any changes made. The datafile can be edited, and the new version submitted.
+Follow a LinkExit = Show PageState
+Submit edited wireframe data = Process edited data
+menu.Quick Map = Home
+menu.History = History
+[Process edited data]
+;I archive and datestamp the previous version of the wireframe datafile. Then save the new version, including the change description, and refresh the data.
+Continue = Home
+[History]
+;I show a list of all previous versions of this wireframe, together with their change descriptions and dates.  If there are no previous versions, a message is displayed.  Links are provided to revert to each previous version, and to delete each version.
+Revert to a previous version = Revert
+Delete a previous version = Confirm Delete Version
+menu.Quick Map = Home
+menu.History = History
+[Revert]
+;I archive and datestamp the current version of the wireframe datafile. Then I copy the version being restored over the current version, and refresh the data, before returning to the home page. 
+Continue = Home
+[Confirm Delete Version]
+;i ask if the user is sure about deleting the version.
+Unsure = History
+Sure = Delete Version
+[Delete Version]
+;I delete the selected version, before returning to the history display.
+Continue = History
+[Help]
+;Shows help text for a single form field
+Return = Home
+  	
+  	
+  	
+		
+		
+	    
+		
+		
+		
+		    
+		
+	
+  
+
+[[:changedescription:]]
+Created by GUI
